@@ -1,0 +1,55 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useEffect, useState } from 'react'
+import { Button } from './ui/button'
+
+interface RazorpayButtonProps {
+  amount: number
+  temp: boolean
+}
+
+const loadScript = (src: string, callback: () => void) => {
+  const script = document.createElement('script')
+  script.src = src
+  script.onload = callback
+  document.head.appendChild(script)
+}
+
+const RazorpayButton: React.FC<RazorpayButtonProps> = ({ amount, temp }) => {
+  const [payment, setPayment] = useState<any>(null) // Use any for now
+  useEffect(() => {
+    loadScript('https://checkout.razorpay.com/v1/checkout.js', () => {
+      const options = {
+        key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID!,
+        amount: amount * 100,
+        currency: 'INR',
+        name: 'Jan Sevaa Foundation',
+        description: 'Donate for a better cause',
+        handler: (response: any) => {
+          // Handle payment success or failure here
+          console.log(response)
+        }
+      }
+
+      // Declare Razorpay on window explicitly
+      const paymentObject: any = new (window as any).Razorpay(options)
+      setPayment(paymentObject)
+    })
+  }, [amount])
+
+  const handleClick = () => {
+    if (payment) {
+      payment.open()
+    }
+  }
+
+  return (
+    <Button
+      className="items-center rounded-xl border bg-blue-500 text-lg hover:bg-blue-400"
+      onClick={handleClick}
+      disabled={temp}>
+      Donate Now
+    </Button>
+  )
+}
+
+export default RazorpayButton
