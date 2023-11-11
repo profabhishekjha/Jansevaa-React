@@ -20,7 +20,7 @@ const Events = () => {
       'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo'
   }
   return (
-    <div className="flex justify-between gap-5 px-20 py-40 max-md:py-24 max-lg:flex-col  max-lg:px-0 max-md:gap-10">
+    <div className="flex justify-between gap-5 px-20 py-40 max-lg:flex-col max-lg:px-0  max-md:gap-10 max-md:py-24">
       <div className=" max-sm:mb-20">
         <div className="item-center flex w-full justify-center pb-10">
           <span className="text-xl font-bold">List of all our Events</span>
@@ -74,7 +74,7 @@ const Events = () => {
         </Table>
       </div>
       <div className="flex justify-center">
-        <div className="flex h-fit w-[450px] flex-col justify-center  gap-2 max-sm:w-full max-sm:mx-2">
+        <div className="flex h-fit w-[450px] flex-col justify-center  gap-2 max-sm:mx-2 max-sm:w-full">
           <EventCard
             isLoading={isLoading}
             image={EventCardDummyData.image}
@@ -132,3 +132,5 @@ export const TableRowComp = ({
     </>
   )
 }
+
+/* Events Page */
