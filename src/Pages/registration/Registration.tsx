@@ -58,3 +58,5 @@ const Registration = () => {
 }
 
 export default Registration
+
+/* Registration page */
