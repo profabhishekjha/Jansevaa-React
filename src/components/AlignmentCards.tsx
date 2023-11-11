@@ -38,3 +38,5 @@ const AlignmentCards = ({ heading, cardtext, images, isImageLeft }: AlignmentCar
 }
 
 export default AlignmentCards
+
+/* AlignmentCards component */
