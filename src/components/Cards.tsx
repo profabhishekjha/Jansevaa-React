@@ -32,3 +32,5 @@ const Cards = ({ heading, description, images }: CardsType) => {
 }
 
 export default Cards
+
+/* Cards comp */
