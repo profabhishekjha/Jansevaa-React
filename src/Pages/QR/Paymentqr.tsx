@@ -19,3 +19,5 @@ const Paymentqr = () => {
 }
 
 export default Paymentqr
+
+/* Paymentqr page */
