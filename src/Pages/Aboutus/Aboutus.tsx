@@ -69,7 +69,7 @@ const Aboutus = () => {
               ? `But our impact doesn't stop there. We recognize that true empowerment encompasses holistic growth. Through our diverse training initiatives, we empower individuals with essential skills that open doors to opportunities they might not have thought possible. From vocational training that enhances employability to life skills that foster personal development, our training programs create pathways to self-sufficiency and success. At the heart of Jansevaa lies an unyielding dedication to fostering positive change.`
               : `लेकिन हमारा प्रभाव वहीं नहीं रुकता। हम मानते हैं कि वास्तविक सशक्तिकरण पूर्णिमा से समृद्धि का सामाग्री है। हमारे विविध प्रशिक्षण पहलुओं के माध्यम से, हम व्यक्तियों को महत्वपूर्ण कौशलों से सशक्त करते हैं जो उनके लिए असंभाव सोचे गए अवसरों के द्वार खोलते हैं। रोजगारी की वृद्धि को बढ़ाने वाले व्यावसायिक प्रशिक्षण से लेकर व्यक्तिगत विकास को बढ़ावा देने वाले जीवन कौशलों तक, हमारे प्रशिक्षण कार्यक्रम स्वावलंबन और सफलता की मार्गप्रदर्शन बनाते हैं। जनसेवा के मूल में सकारात्मक परिवर्तन को पोषण देने के लिए अतल समर्पण है।`}
             <img
-              className="z-1 absolute bottom-0 right-0 max-sm:h-5 h-9"
+              className="z-1 absolute bottom-0 right-0 h-9 max-sm:h-5"
               src="/icons/quotes-right.svg"
               alt="VHL"
             />
@@ -142,3 +142,5 @@ const Aboutus = () => {
 }
 
 export default Aboutus
+
+/* Aboutus Page */
